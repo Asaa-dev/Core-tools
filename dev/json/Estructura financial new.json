@@ -1,0 +1,40 @@
+{
+  "titulo": "Documentación sitio web informativo - Financial New",
+  "fecha_exportacion": "2025-07-04 14:18:59",
+  "resumen": "Ángel solicitó asesoría para estructurar la documentación técnica de un sitio web institucional informativo. Se definieron secciones estándar, buenas prácticas, parámetros legales y técnicos, además de textos legales ajustados para política de privacidad, consentimiento en WhatsApp y formularios. La estructura final se organizó en 8 bloques con descripciones claras para futuras referencias.",
+  "estructura_documento": [
+    {
+      "seccion": "Resumen ejecutivo",
+      "descripcion": "Objetivo, público objetivo y alcance del sitio."
+    },
+    {
+      "seccion": "Mapa del sitio",
+      "descripcion": "Jerarquía y relación entre las vistas o secciones del sitio."
+    },
+    {
+      "seccion": "Especificaciones de contenido",
+      "descripcion": "Resumen de cada vista: objetivo, contenido clave y consideraciones técnicas."
+    },
+    {
+      "seccion": "Componentes funcionales",
+      "descripcion": "Formularios, botones, integraciones y elementos interactivos."
+    },
+    {
+      "seccion": "Lineamientos institucionales de redacción",
+      "descripcion": "Reglas de estilo, tono institucional y estructura textual aprobada."
+    },
+    {
+      "seccion": "Tratamiento de datos personales",
+      "descripcion": "Consentimientos, uso de datos, política legal aplicada."
+    },
+    {
+      "seccion": "Especificaciones técnicas del proyecto",
+      "descripcion": "Tecnología, hosting, diseño responsivo y mantenimiento."
+    },
+    {
+      "seccion": "Anexos",
+      "descripcion": "Wireframes, textos aprobados, glosario, versiones anteriores (opcional)."
+    }
+  ],
+  "usuario": "Ángel Steven Artunduaga Arciniegas"
+}
