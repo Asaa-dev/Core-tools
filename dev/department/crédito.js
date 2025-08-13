@@ -7,12 +7,12 @@ const CONFIG = {
   claveDuplicado: "Número de identificación",
   camposObligatorios: [
     "Número de identificación",
-    "Número de proceso",
+    // "Número de proceso",
     "Nombres completos",
-    "Contacto",
-    "Ubicación",
-    "Dirección de residencia",
-    "Dirección de correo electrónico",
+    // "Contacto",
+    // "Ubicación",
+    // "Dirección de residencia",
+    // "Dirección de correo electrónico",
     "Pagaduría",
     "Entidad",
     "Modalidad",
@@ -22,13 +22,13 @@ const CONFIG = {
     "Tasa",
     "Fecha de recepción",
     "Fecha de radicación",
-    "Fecha de devolución",
-    "Fecha de desembolso",
+    // "Fecha de devolución",
+    // "Fecha de desembolso",
     "Documento",
-    "Responsable comercial",
+    // "Responsable comercial",
     "Estado",
     "Instrucción",
-    "Observación",
+    // "Observación",
   ],
   hojaLogs: "Data",
   logSheetId: "1EdGC3kUCw6U2Qjk9GIh9uFo7YCj5QclX3WecviwCE6o",
@@ -102,21 +102,19 @@ function ejecutarTodo() {
 // Menú personalizado.
 function onOpen() {
   const ui = SpreadsheetApp.getUi();
-  const menu = ui.createMenu("Cooasefin");
+  const menu = ui.createMenu("⚙️ Cooasefin");
   const usuario = Session.getActiveUser().getEmail();
 
-  menu.addItem("Compilación", "ejecutarTodo");
-
-  menu.addSeparator();
-
-  menu.addItem("Depuración formato", "ejecutarDepuracion");
-  menu.addItem("Generación documental", "ejecutarGeneracion");
-
-  menu.addSeparator();
+  menu.addItem("🚀 Compilación", "ejecutarTodo");
 
   if (usuario === "angel.arciniegas@cooasefin.com.co") {
-    menu.addItem("Ejecución periódica", "creacionActivador");
+    menu.addItem("⚡ Ejecución periódica", "creacionActivador");
   }
+
+  menu.addSeparator();
+
+  menu.addItem("✏️ Depuración formato", "ejecutarDepuracion");
+  menu.addItem("📝 Generación documental", "ejecutarGeneracion");
 
   menu.addToUi();
 }

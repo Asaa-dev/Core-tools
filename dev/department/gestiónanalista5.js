@@ -1,41 +1,35 @@
 const CONFIG = {
-  folderId: "1JAG1G2Kluw0eTUSl6sYjOiA_flU5JjRE",
+  // Reservados para futuras funciones de generación documental:
+  //folderId: "1j8UTyKhhDdxqrs8XRxWbDH-bPCFg98Dd",
+  //docTemplateId: "10VgbuoK-rmvl0OVRv7w1OUCNtn30PNuHlmo0pwVOc24",
+  //hojaLogs: "Data",
+  //logSheetId: "1VlhDd5zrmWs6FNnk_SR_lUoxVQBAXn1fD5VdEUr1rXQ",
+  //gestion: "Documentación",
+  //area: "Corporativo",
+
   sheetName: "Gestión de registro",
-  docTemplateId: "1e9uv6fcUqxP-SEAWT9KiKUt9CfN5HEY3l9zOTamdZHQ",
-  docTemplateName: "Radicación",
-  colAccion: "Instrucción",
-  claveDuplicado: "Número de identificación",
+  // docTemplateName: "Perfilamiento",
+  // colAccion: "Instrucción",
+  // claveDuplicado: "Número de identificación",
+  // claveAgendamiento: "Número de agendamiento",
   camposObligatorios: [
-    "Número de identificación",
-    // "Número de proceso",
+    //"Número de identificación",
     "Nombres completos",
-    // "Contacto",
-    // "Ubicación",
-    // "Dirección de residencia",
-    // "Dirección de correo electrónico",
+    "Contacto",
+    "Contactos adicionales",
+    "Ubicación",
+    "Campaña",
     "Pagaduría",
     "Entidad",
-    "Modalidad",
-    "Monto",
-    "Cuota",
-    "Plazo",
-    "Tasa",
-    "Fecha de recepción",
-    "Fecha de radicación",
-    // "Fecha de devolución",
-    // "Fecha de desembolso",
-    "Documento",
-    // "Responsable comercial",
+    "Fecha de asignación",
+    "Fecha de gestión",
+    "Responsable de venta",
     "Estado",
-    "Instrucción",
-    // "Observación",
+    "Valoración",
+    "Observación",
   ],
-  hojaLogs: "Data",
-  logSheetId: "1EdGC3kUCw6U2Qjk9GIh9uFo7YCj5QclX3WecviwCE6o",
-
-  gestion: "Documentación",
-  area: "Crédito",
 };
+
 // Ejecución individual: Depuración
 function ejecutarDepuracion() {
   if (typeof Coretools?.main === "function") {
@@ -43,24 +37,30 @@ function ejecutarDepuracion() {
     Coretools.main();
   } else {
     Logger.log("Error: Coretools.main() no está definida.");
+    SpreadsheetApp.getUi().alert("Función depuración no disponible");
   }
 }
 
-// Ejecución individual: Generación documental
+// Función ejecución generación no disponible
 function ejecutarGeneracion(origen = "Manual") {
+  SpreadsheetApp.getUi().alert("Función generación no disponible.");
+
+  /*
+  // Habilitar función generación
   if (typeof Coretools?.generacionDocumento === "function") {
     Logger.log(`Ejecución: documentación (${origen})`);
     const configConOrigen = { ...CONFIG, origenEjecucion: origen };
     Coretools.generacionDocumento(configConOrigen);
   } else {
     Logger.log("Error: Coretools.generacionDocumento() no está definida.");
+    SpreadsheetApp.getUi().alert("Función generación no disponible.");
   }
+  */
 }
 
-// Ejecución activador automático
+// Ejecución activador automático.
 function ejecucionActivador() {
   ejecutarDepuracion();
-  ejecutarGeneracion("Automático");
 }
 
 // Activador automático.
@@ -91,12 +91,17 @@ function creacionActivador() {
   });
 }
 
-// Ejecución completa
+// Ejecución compiplación inhabilitada.
 function ejecutarTodo() {
+  SpreadsheetApp.getUi().alert("Función compilación no disponible.");
+
+  /*
+  // Habilitar función generación.
   Logger.log("Ejecución: general");
   ejecutarDepuracion();
   ejecutarGeneracion();
   Logger.log("Ejecución finalizada");
+  */
 }
 
 // Menú personalizado.

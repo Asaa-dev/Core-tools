@@ -8,10 +8,10 @@ const CONFIG = {
   claveAgendamiento: "Número de agendamiento",
   camposObligatorios: [
     "Número de identificación",
-    "Número de agendamiento",
+    // "Número de agendamiento",
     "Nombres completos",
-    "Contacto",
-    "Ubicación",
+    // "Contacto",
+    // "Ubicación",
     "Pagaduría",
     "Entidad",
     "Modalidad",
@@ -22,10 +22,10 @@ const CONFIG = {
     "Fecha de agendamiento",
     "Documento",
     "Departamento",
-    "Responsable comercial",
+    // "Responsable comercial",
     "Estado",
     "Instrucción",
-    "Observación",
+    // "Observación",
   ],
   hojaLogs: "Data",
   logSheetId: "1VlhDd5zrmWs6FNnk_SR_lUoxVQBAXn1fD5VdEUr1rXQ",
@@ -99,21 +99,19 @@ function ejecutarTodo() {
 // Menú personalizado.
 function onOpen() {
   const ui = SpreadsheetApp.getUi();
-  const menu = ui.createMenu("Cooasefin");
+  const menu = ui.createMenu("⚙️ Cooasefin");
   const usuario = Session.getActiveUser().getEmail();
 
-  menu.addItem("Compilación", "ejecutarTodo");
-
-  menu.addSeparator();
-
-  menu.addItem("Depuración formato", "ejecutarDepuracion");
-  menu.addItem("Generación documental", "ejecutarGeneracion");
-
-  menu.addSeparator();
+  menu.addItem("🚀 Compilación", "ejecutarTodo");
 
   if (usuario === "angel.arciniegas@cooasefin.com.co") {
-    menu.addItem("Ejecución periódica", "creacionActivador");
+    menu.addItem("⚡ Ejecución periódica", "creacionActivador");
   }
+
+  menu.addSeparator();
+
+  menu.addItem("✏️ Depuración formato", "ejecutarDepuracion");
+  menu.addItem("📝 Generación documental", "ejecutarGeneracion");
 
   menu.addToUi();
 }
